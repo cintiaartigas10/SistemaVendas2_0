@@ -14,13 +14,13 @@ import java.util.Scanner;
  */
 public class VisaoMenu {
 
-    private static int produtoRemover;
     public static int menuPrincipal(){
         System.out.println("========SISTEMA DE VENDAS 2.0=======");
         System.out.println("1 - Cadastrar produto");
-        System.out.println("1 - Alterar produto");
-        System.out.println("1 - Remover produto");
-        System.out.println("1 - Listar produto");
+        System.out.println("2 - Alterar produto");
+        System.out.println("3 - Remover produto");
+        System.out.println("4 - Listar produto");
+        System.out.println("5 - Vender produto");
         System.out.println("====================================");
         int opcaoMenu = new Scanner(System.in).nextInt();
         
@@ -78,7 +78,7 @@ public class VisaoMenu {
     }
         return object;
     }
-         public static int menuRemoveProduto(){
+         public static int menuAlterarProduto(){
         System.out.println("=========ALTERAR PRODUTO=======");
         System.out.println("Qual produto deseja remover?");
         
@@ -87,9 +87,9 @@ public class VisaoMenu {
         }
         
         System.out.println("===============================");
-        int produtoRemover = new Scanner(System.in).nextInt();
+        int produtoAlterar = new Scanner(System.in).nextInt();
         
-        return produtoRemover;
+        return produtoAlterar;
     }
 
     public static int menuRemoverProduto() {
@@ -108,8 +108,21 @@ public class VisaoMenu {
     
     public static int menuRemocaoProduto() {
         
-        
-        
         return 0;
+        
     }
+    
+      public static int menuVenderProduto(){
+        System.out.println("================VENDER PRODUTO================");
+        System.out.println("Qual produto deseja vender?");
+
+        for(int i = 0; i < ControleSistema.produtos.size(); i++){
+            System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
+        }
+
+        System.out.println("===============================================");
+        int produtoVender = new Scanner(System.in).nextInt();
+ 
+        return produtoVender;
+}
 }

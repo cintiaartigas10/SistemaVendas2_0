@@ -22,7 +22,7 @@ public class VisaoTelevisao {
         System.out.println("Quantidade de Polegadas: ");
         televisao.setPolegadas(new Scanner(System.in).nextDouble());
         System.out.println("Marca: ");
-        televisao.setProcessador(new Scanner(System.in).nextLine());
+        televisao.setMarca(new Scanner(System.in).nextLine());
         System.out.println("===============================================");
         
         return televisao;

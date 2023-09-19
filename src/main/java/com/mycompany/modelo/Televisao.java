@@ -10,7 +10,6 @@ package com.mycompany.modelo;
  */
 public class Televisao extends Produto{
      private Double polegadas;
-    private String processador;
     private String marca;
 
     public Televisao() {
@@ -20,18 +19,18 @@ public class Televisao extends Produto{
         return polegadas;
     }
 
-    public void setMemoriaRam(Double polegadas) {
+    public void setPolegadas(Double polegadas) {
         this.polegadas = polegadas;
     }
 
-    public String getProcessador() {
-        return processador;
+    public String getMarcaarca() {
+        return marca;
     }
 
-    public void setProcessador(String processador) {
-        this.processador = processador;
+    public void setProcessador(String marca) {
+        this.marca = marca;
     }
-
+    
     @Override
     public String toString() {
         return  "Nome: " + super.getNome() + 
@@ -45,6 +44,9 @@ public class Televisao extends Produto{
 
     public void setPolegada(double nextDouble) {
        }
+
+    public void setMarca(String nextLine) {
+    }
 
        }
 
